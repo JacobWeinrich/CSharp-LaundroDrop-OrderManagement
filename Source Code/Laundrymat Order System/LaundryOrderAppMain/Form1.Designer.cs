@@ -195,7 +195,7 @@
 			this.btnAdminResetDbCustomer.Name = "btnAdminResetDbCustomer";
 			this.btnAdminResetDbCustomer.Size = new System.Drawing.Size(172, 26);
 			this.btnAdminResetDbCustomer.TabIndex = 4;
-			this.btnAdminResetDbCustomer.Text = "Reset Customer DB";
+			this.btnAdminResetDbCustomer.Text = "Reset Order and Customer DB";
 			this.btnAdminResetDbCustomer.UseVisualStyleBackColor = false;
 			this.btnAdminResetDbCustomer.Visible = false;
 			this.btnAdminResetDbCustomer.Click += new System.EventHandler(this.btnAdminResetDbCustomer_Click);

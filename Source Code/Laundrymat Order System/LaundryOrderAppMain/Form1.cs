@@ -42,11 +42,15 @@ namespace LaundryOrderAppMain
 		{
 			if (tbcScreens.SelectedIndex == 0)
 			{
-				MessageBox.Show("This is the Instructions for Order Create Screen", "Create Order - HELP");
+				MessageBox.Show($"Create Order Steps.\n\nStep 1:\n Select Customer by pressing the BLUE 'Select/Add Customer' Button.\n\nStep 2:\n Input amount for what items they have.\n\nStep 3:\n Add Any Notes to Order.\n\nStep 4:\n Press GREEN 'Create Order' Button.\n\nFor More Help Contact Manager/Owner", "Create Order - HELP", MessageBoxButtons.OK ,MessageBoxIcon.Information);
 			}
 			else if (tbcScreens.SelectedIndex == 1)
 			{
-				MessageBox.Show("This is the Instructions for Order Lookup Screen", "Create Lookup / Edit - HELP");
+				MessageBox.Show($"Customer Selection/Add Steps.\n\nStep 1:\n Search for Customer.\n\nStep 2-A:\n If Customer IS FOUND Select from list.\n\nStep 2-B:\n If Customer NOT FOUND add customer with customer add fields.\n\nStep 3-A:\n After Customer has been added or selected you may edit that customer.\n\nStep 4:\n Confirm Selection of Customer.\n\nFor More Help Contact Manager/Owner", "Customer Search/Add - HELP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			else if (tbcScreens.SelectedIndex == 2)
+			{
+				MessageBox.Show("Order Lookup and Information Screen\n\nStep 1:\n Search for order with Customer ID or Order #\n\nStep 2:\n Select Order From List\n\n Options:\n View Order Info: Order Notes OR Customer Info\n Order Status Edit: Mark Paid or PickedUp\n Print Order Tickets: Customer, Basket, Employee\n\n Delete Order: \n WARNING DO NOT DO THIS UNLESS 100% SURE\n\nFor More Help Contact Manager/Owner", "Order Lookup and Information Screen - HELP", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 		}
 
@@ -741,6 +745,10 @@ namespace LaundryOrderAppMain
 			if (Interaction.InputBox("To Access Admin Screen.\nEnter Admin Code:", "Admin Login", "", -1, -1) == "0022")
 			{
 				new AdminScreenForm(laundryOrderDB).Show();
+			}
+			else
+			{
+				MessageBox.Show("Invalid Admin Code.\nPlease Try Again ", "Admin Code Invalid - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			
 		}
