@@ -14,4 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LaundryOrderAppMain
-build_property.ProjectDir = C:\Users\jacob\Documents\GitHub\LaundroDrop-Orders\Source Code\Laundrymat Order System\LaundryOrderAppMain\
+build_property.ProjectDir = C:\Users\jacob\Documents\GitHub\LaundroDrop-Orders\Build Versions\V1.0.0 - 5-3-2023\LaundryOrderApp - Source Code\

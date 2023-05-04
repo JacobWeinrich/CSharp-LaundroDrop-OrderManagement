@@ -129,6 +129,12 @@
 			this.txtOrderNumSearch = new System.Windows.Forms.TextBox();
 			this.lblOrderNumberSearch = new System.Windows.Forms.Label();
 			this.Order_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.tbpCouponCheckScreen = new System.Windows.Forms.TabPage();
+			this.txtCouponCodeScreenCodeInput = new System.Windows.Forms.TextBox();
+			this.lblCouponCodeScreenCodeInput = new System.Windows.Forms.Label();
+			this.btnCouponCodeScreenCheckCode = new System.Windows.Forms.Button();
+			this.lblCouponCodeScreenResultTitleCouponCode = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultTitleExpDate = new System.Windows.Forms.Label();
 			this.panMenusSideBar.SuspendLayout();
 			this.tbcScreens.SuspendLayout();
 			this.tbpOrderCreateScreen.SuspendLayout();
@@ -158,6 +164,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.dgvCustomerSearchResults)).BeginInit();
 			this.tbpOrderEditScreen.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvOrderSelectList)).BeginInit();
+			this.tbpCouponCheckScreen.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panMenusSideBar
@@ -248,6 +255,7 @@
 			this.tbcScreens.Controls.Add(this.tbpOrderCreateScreen);
 			this.tbcScreens.Controls.Add(this.tbpCustomerSelectScreen);
 			this.tbcScreens.Controls.Add(this.tbpOrderEditScreen);
+			this.tbcScreens.Controls.Add(this.tbpCouponCheckScreen);
 			this.tbcScreens.ImeMode = System.Windows.Forms.ImeMode.NoControl;
 			this.tbcScreens.Location = new System.Drawing.Point(193, 12);
 			this.tbcScreens.Name = "tbcScreens";
@@ -1303,6 +1311,71 @@
 			this.Order_ID.HeaderText = "Column1";
 			this.Order_ID.Name = "Order_ID";
 			// 
+			// tbpCouponCheckScreen
+			// 
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultTitleExpDate);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultTitleCouponCode);
+			this.tbpCouponCheckScreen.Controls.Add(this.btnCouponCodeScreenCheckCode);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenCodeInput);
+			this.tbpCouponCheckScreen.Controls.Add(this.txtCouponCodeScreenCodeInput);
+			this.tbpCouponCheckScreen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.tbpCouponCheckScreen.Location = new System.Drawing.Point(4, 24);
+			this.tbpCouponCheckScreen.Name = "tbpCouponCheckScreen";
+			this.tbpCouponCheckScreen.Size = new System.Drawing.Size(1074, 675);
+			this.tbpCouponCheckScreen.TabIndex = 4;
+			this.tbpCouponCheckScreen.Text = "Coupon check";
+			this.tbpCouponCheckScreen.UseVisualStyleBackColor = true;
+			// 
+			// txtCouponCodeScreenCodeInput
+			// 
+			this.txtCouponCodeScreenCodeInput.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.txtCouponCodeScreenCodeInput.Location = new System.Drawing.Point(18, 39);
+			this.txtCouponCodeScreenCodeInput.Name = "txtCouponCodeScreenCodeInput";
+			this.txtCouponCodeScreenCodeInput.PlaceholderText = "Coupon Code Input";
+			this.txtCouponCodeScreenCodeInput.Size = new System.Drawing.Size(244, 25);
+			this.txtCouponCodeScreenCodeInput.TabIndex = 0;
+			// 
+			// lblCouponCodeScreenCodeInput
+			// 
+			this.lblCouponCodeScreenCodeInput.AutoSize = true;
+			this.lblCouponCodeScreenCodeInput.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenCodeInput.Location = new System.Drawing.Point(18, 16);
+			this.lblCouponCodeScreenCodeInput.Name = "lblCouponCodeScreenCodeInput";
+			this.lblCouponCodeScreenCodeInput.Size = new System.Drawing.Size(147, 20);
+			this.lblCouponCodeScreenCodeInput.TabIndex = 1;
+			this.lblCouponCodeScreenCodeInput.Text = "Check Coupon Code";
+			// 
+			// btnCouponCodeScreenCheckCode
+			// 
+			this.btnCouponCodeScreenCheckCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.btnCouponCodeScreenCheckCode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnCouponCodeScreenCheckCode.Location = new System.Drawing.Point(268, 41);
+			this.btnCouponCodeScreenCheckCode.Name = "btnCouponCodeScreenCheckCode";
+			this.btnCouponCodeScreenCheckCode.Size = new System.Drawing.Size(102, 23);
+			this.btnCouponCodeScreenCheckCode.TabIndex = 2;
+			this.btnCouponCodeScreenCheckCode.Text = "Check Code";
+			this.btnCouponCodeScreenCheckCode.UseVisualStyleBackColor = false;
+			// 
+			// lblCouponCodeScreenResultTitleCouponCode
+			// 
+			this.lblCouponCodeScreenResultTitleCouponCode.AutoSize = true;
+			this.lblCouponCodeScreenResultTitleCouponCode.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultTitleCouponCode.Location = new System.Drawing.Point(18, 94);
+			this.lblCouponCodeScreenResultTitleCouponCode.Name = "lblCouponCodeScreenResultTitleCouponCode";
+			this.lblCouponCodeScreenResultTitleCouponCode.Size = new System.Drawing.Size(106, 20);
+			this.lblCouponCodeScreenResultTitleCouponCode.TabIndex = 3;
+			this.lblCouponCodeScreenResultTitleCouponCode.Text = "Coupon Code:";
+			// 
+			// lblCouponCodeScreenResultTitleExpDate
+			// 
+			this.lblCouponCodeScreenResultTitleExpDate.AutoSize = true;
+			this.lblCouponCodeScreenResultTitleExpDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultTitleExpDate.Location = new System.Drawing.Point(49, 125);
+			this.lblCouponCodeScreenResultTitleExpDate.Name = "lblCouponCodeScreenResultTitleExpDate";
+			this.lblCouponCodeScreenResultTitleExpDate.Size = new System.Drawing.Size(75, 20);
+			this.lblCouponCodeScreenResultTitleExpDate.TabIndex = 4;
+			this.lblCouponCodeScreenResultTitleExpDate.Text = "Exp Date:";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1353,6 +1426,8 @@
 			this.tbpOrderEditScreen.ResumeLayout(false);
 			this.tbpOrderEditScreen.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvOrderSelectList)).EndInit();
+			this.tbpCouponCheckScreen.ResumeLayout(false);
+			this.tbpCouponCheckScreen.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -1459,5 +1534,11 @@
 		private Button btnEditCustomerCancel;
 		private Label lblOrderScreenTotal;
 		private Button btnAdminScreen;
+		private TabPage tbpCouponCheckScreen;
+		private Label lblCouponCodeScreenResultTitleExpDate;
+		private Label lblCouponCodeScreenResultTitleCouponCode;
+		private Button btnCouponCodeScreenCheckCode;
+		private Label lblCouponCodeScreenCodeInput;
+		private TextBox txtCouponCodeScreenCodeInput;
 	}
 }

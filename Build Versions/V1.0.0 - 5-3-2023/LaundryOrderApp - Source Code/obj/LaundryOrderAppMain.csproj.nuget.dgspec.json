@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Source Code\\Laundrymat Order System\\LaundryOrderAppMain\\LaundryOrderAppMain.csproj": {}
+    "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Build Versions\\V1.0.0 - 5-3-2023\\LaundryOrderApp - Source Code\\LaundryOrderAppMain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Source Code\\Laundrymat Order System\\LaundryOrderAppMain\\LaundryOrderAppMain.csproj": {
+    "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Build Versions\\V1.0.0 - 5-3-2023\\LaundryOrderApp - Source Code\\LaundryOrderAppMain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Source Code\\Laundrymat Order System\\LaundryOrderAppMain\\LaundryOrderAppMain.csproj",
+        "projectUniqueName": "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Build Versions\\V1.0.0 - 5-3-2023\\LaundryOrderApp - Source Code\\LaundryOrderAppMain.csproj",
         "projectName": "LaundryOrderAppMain",
-        "projectPath": "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Source Code\\Laundrymat Order System\\LaundryOrderAppMain\\LaundryOrderAppMain.csproj",
+        "projectPath": "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Build Versions\\V1.0.0 - 5-3-2023\\LaundryOrderApp - Source Code\\LaundryOrderAppMain.csproj",
         "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Source Code\\Laundrymat Order System\\LaundryOrderAppMain\\obj\\",
+        "outputPath": "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Build Versions\\V1.0.0 - 5-3-2023\\LaundryOrderApp - Source Code\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

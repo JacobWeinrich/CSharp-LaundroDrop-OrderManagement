@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rGNWSJYhr2ZxXjR9oQwBw8S2bU44E+ZDQo82+k8eg5guqkEAZA8zWM+ppLPyVykTTnnYpyd8PvnW6XpFJSNo/g==",
+  "dgSpecHash": "OUZY28qMNVuya9xzdNTlSHiv/uzYhX9ex7lqns887PFV73Ar4HlHqH56pqnbDewt/AiILgyrDncqrcuv6iGM0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Source Code\\Laundrymat Order System\\LaundryOrderAppMain\\LaundryOrderAppMain.csproj",
+  "projectFilePath": "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Build Versions\\V1.0.0 - 5-3-2023\\LaundryOrderApp - Source Code\\LaundryOrderAppMain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jacob\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\jacob\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
