@@ -13,6 +13,7 @@ namespace LaundryOrderAppMain
 		public DbSet<Customer> Customers { get; set; }
 		public DbSet<Order> Orders { get; set; }
 		public DbSet<Prices> Prices { get; set; }
+		public DbSet<Coupon> Coupons { get; set; }
 
 		//Conection String
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -53,6 +54,7 @@ namespace LaundryOrderAppMain
 
 
 				);
+			modelBuilder.Entity<Coupon>().HasData(new Coupon { CouponID = 1, Used = false, ISDropOffServiceCoupon = false, DiscountAmount = null, CreatedDate = DateTime.Now, StartDate = DateTime.Now, ExpDate = DateTime.Now, Instructions = "Start 1 Washer of any Size for Customer", Description = "1 Free Wash Any Size Washer" });
 		}
 
 	}

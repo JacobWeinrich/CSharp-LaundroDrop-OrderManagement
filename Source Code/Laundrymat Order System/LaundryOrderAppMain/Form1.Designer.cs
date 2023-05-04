@@ -30,6 +30,7 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.panMenusSideBar = new System.Windows.Forms.Panel();
+			this.btnMenusCoupons = new System.Windows.Forms.Button();
 			this.btnAdminScreen = new System.Windows.Forms.Button();
 			this.btnAdminResetDbCustomer = new System.Windows.Forms.Button();
 			this.btnScreenHelp = new System.Windows.Forms.Button();
@@ -128,13 +129,27 @@
 			this.lblOrderNumberInput = new System.Windows.Forms.Label();
 			this.txtOrderNumSearch = new System.Windows.Forms.TextBox();
 			this.lblOrderNumberSearch = new System.Windows.Forms.Label();
-			this.Order_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tbpCouponCheckScreen = new System.Windows.Forms.TabPage();
-			this.txtCouponCodeScreenCodeInput = new System.Windows.Forms.TextBox();
-			this.lblCouponCodeScreenCodeInput = new System.Windows.Forms.Label();
-			this.btnCouponCodeScreenCheckCode = new System.Windows.Forms.Button();
-			this.lblCouponCodeScreenResultTitleCouponCode = new System.Windows.Forms.Label();
+			this.rtxtCouponScreenInstructionsResults = new System.Windows.Forms.RichTextBox();
+			this.rtxtCouponScreenDescResults = new System.Windows.Forms.RichTextBox();
+			this.lblCouponCodeScreenResultCouponAmountResults = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultCouponWDFResults = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultCouponValidResults = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultCouponExpDateResults = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultCouponCodeResults = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultTitleInstructions = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultTitleDesc = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultTitleDiscountAmount = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultTitleDropOffServiceCoupon = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultTitleValid = new System.Windows.Forms.Label();
 			this.lblCouponCodeScreenResultTitleExpDate = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultTitleCouponCode = new System.Windows.Forms.Label();
+			this.btnCouponCodeScreenCheckCode = new System.Windows.Forms.Button();
+			this.lblCouponCodeScreenCodeInput = new System.Windows.Forms.Label();
+			this.txtCouponCodeScreenCodeInput = new System.Windows.Forms.TextBox();
+			this.Order_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.lblCouponCodeScreenResultCouponStartDateResults = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultTitleStartDate = new System.Windows.Forms.Label();
 			this.panMenusSideBar.SuspendLayout();
 			this.tbcScreens.SuspendLayout();
 			this.tbpOrderCreateScreen.SuspendLayout();
@@ -170,6 +185,7 @@
 			// panMenusSideBar
 			// 
 			this.panMenusSideBar.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.panMenusSideBar.Controls.Add(this.btnMenusCoupons);
 			this.panMenusSideBar.Controls.Add(this.btnAdminScreen);
 			this.panMenusSideBar.Controls.Add(this.btnAdminResetDbCustomer);
 			this.panMenusSideBar.Controls.Add(this.btnScreenHelp);
@@ -180,6 +196,16 @@
 			this.panMenusSideBar.Name = "panMenusSideBar";
 			this.panMenusSideBar.Size = new System.Drawing.Size(175, 703);
 			this.panMenusSideBar.TabIndex = 0;
+			// 
+			// btnMenusCoupons
+			// 
+			this.btnMenusCoupons.Location = new System.Drawing.Point(0, 128);
+			this.btnMenusCoupons.Name = "btnMenusCoupons";
+			this.btnMenusCoupons.Size = new System.Drawing.Size(175, 38);
+			this.btnMenusCoupons.TabIndex = 6;
+			this.btnMenusCoupons.Text = "Coupon Check";
+			this.btnMenusCoupons.UseVisualStyleBackColor = true;
+			this.btnMenusCoupons.Click += new System.EventHandler(this.btnMenusCoupons_Click);
 			// 
 			// btnAdminScreen
 			// 
@@ -1306,13 +1332,22 @@
 			this.lblOrderNumberSearch.TabIndex = 0;
 			this.lblOrderNumberSearch.Text = "Input Order Number to Search for that Order:";
 			// 
-			// Order_ID
-			// 
-			this.Order_ID.HeaderText = "Column1";
-			this.Order_ID.Name = "Order_ID";
-			// 
 			// tbpCouponCheckScreen
 			// 
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultCouponStartDateResults);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultTitleStartDate);
+			this.tbpCouponCheckScreen.Controls.Add(this.rtxtCouponScreenInstructionsResults);
+			this.tbpCouponCheckScreen.Controls.Add(this.rtxtCouponScreenDescResults);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultCouponAmountResults);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultCouponWDFResults);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultCouponValidResults);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultCouponExpDateResults);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultCouponCodeResults);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultTitleInstructions);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultTitleDesc);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultTitleDiscountAmount);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultTitleDropOffServiceCoupon);
+			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultTitleValid);
 			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultTitleExpDate);
 			this.tbpCouponCheckScreen.Controls.Add(this.lblCouponCodeScreenResultTitleCouponCode);
 			this.tbpCouponCheckScreen.Controls.Add(this.btnCouponCodeScreenCheckCode);
@@ -1326,24 +1361,141 @@
 			this.tbpCouponCheckScreen.Text = "Coupon check";
 			this.tbpCouponCheckScreen.UseVisualStyleBackColor = true;
 			// 
-			// txtCouponCodeScreenCodeInput
+			// rtxtCouponScreenInstructionsResults
 			// 
-			this.txtCouponCodeScreenCodeInput.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.txtCouponCodeScreenCodeInput.Location = new System.Drawing.Point(18, 39);
-			this.txtCouponCodeScreenCodeInput.Name = "txtCouponCodeScreenCodeInput";
-			this.txtCouponCodeScreenCodeInput.PlaceholderText = "Coupon Code Input";
-			this.txtCouponCodeScreenCodeInput.Size = new System.Drawing.Size(244, 25);
-			this.txtCouponCodeScreenCodeInput.TabIndex = 0;
+			this.rtxtCouponScreenInstructionsResults.Location = new System.Drawing.Point(268, 257);
+			this.rtxtCouponScreenInstructionsResults.Name = "rtxtCouponScreenInstructionsResults";
+			this.rtxtCouponScreenInstructionsResults.ReadOnly = true;
+			this.rtxtCouponScreenInstructionsResults.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+			this.rtxtCouponScreenInstructionsResults.Size = new System.Drawing.Size(415, 46);
+			this.rtxtCouponScreenInstructionsResults.TabIndex = 16;
+			this.rtxtCouponScreenInstructionsResults.Text = "No Results";
 			// 
-			// lblCouponCodeScreenCodeInput
+			// rtxtCouponScreenDescResults
 			// 
-			this.lblCouponCodeScreenCodeInput.AutoSize = true;
-			this.lblCouponCodeScreenCodeInput.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.lblCouponCodeScreenCodeInput.Location = new System.Drawing.Point(18, 16);
-			this.lblCouponCodeScreenCodeInput.Name = "lblCouponCodeScreenCodeInput";
-			this.lblCouponCodeScreenCodeInput.Size = new System.Drawing.Size(147, 20);
-			this.lblCouponCodeScreenCodeInput.TabIndex = 1;
-			this.lblCouponCodeScreenCodeInput.Text = "Check Coupon Code";
+			this.rtxtCouponScreenDescResults.Location = new System.Drawing.Point(268, 205);
+			this.rtxtCouponScreenDescResults.Name = "rtxtCouponScreenDescResults";
+			this.rtxtCouponScreenDescResults.ReadOnly = true;
+			this.rtxtCouponScreenDescResults.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+			this.rtxtCouponScreenDescResults.Size = new System.Drawing.Size(415, 46);
+			this.rtxtCouponScreenDescResults.TabIndex = 15;
+			this.rtxtCouponScreenDescResults.Text = "No Results";
+			// 
+			// lblCouponCodeScreenResultCouponAmountResults
+			// 
+			this.lblCouponCodeScreenResultCouponAmountResults.AutoSize = true;
+			this.lblCouponCodeScreenResultCouponAmountResults.Location = new System.Drawing.Point(268, 185);
+			this.lblCouponCodeScreenResultCouponAmountResults.Name = "lblCouponCodeScreenResultCouponAmountResults";
+			this.lblCouponCodeScreenResultCouponAmountResults.Size = new System.Drawing.Size(63, 15);
+			this.lblCouponCodeScreenResultCouponAmountResults.TabIndex = 14;
+			this.lblCouponCodeScreenResultCouponAmountResults.Text = "No Results";
+			// 
+			// lblCouponCodeScreenResultCouponWDFResults
+			// 
+			this.lblCouponCodeScreenResultCouponWDFResults.AutoSize = true;
+			this.lblCouponCodeScreenResultCouponWDFResults.Location = new System.Drawing.Point(268, 165);
+			this.lblCouponCodeScreenResultCouponWDFResults.Name = "lblCouponCodeScreenResultCouponWDFResults";
+			this.lblCouponCodeScreenResultCouponWDFResults.Size = new System.Drawing.Size(63, 15);
+			this.lblCouponCodeScreenResultCouponWDFResults.TabIndex = 13;
+			this.lblCouponCodeScreenResultCouponWDFResults.Text = "No Results";
+			// 
+			// lblCouponCodeScreenResultCouponValidResults
+			// 
+			this.lblCouponCodeScreenResultCouponValidResults.AutoSize = true;
+			this.lblCouponCodeScreenResultCouponValidResults.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultCouponValidResults.Location = new System.Drawing.Point(261, 78);
+			this.lblCouponCodeScreenResultCouponValidResults.Name = "lblCouponCodeScreenResultCouponValidResults";
+			this.lblCouponCodeScreenResultCouponValidResults.Size = new System.Drawing.Size(79, 20);
+			this.lblCouponCodeScreenResultCouponValidResults.TabIndex = 12;
+			this.lblCouponCodeScreenResultCouponValidResults.Text = "No Results";
+			// 
+			// lblCouponCodeScreenResultCouponExpDateResults
+			// 
+			this.lblCouponCodeScreenResultCouponExpDateResults.AutoSize = true;
+			this.lblCouponCodeScreenResultCouponExpDateResults.Location = new System.Drawing.Point(268, 144);
+			this.lblCouponCodeScreenResultCouponExpDateResults.Name = "lblCouponCodeScreenResultCouponExpDateResults";
+			this.lblCouponCodeScreenResultCouponExpDateResults.Size = new System.Drawing.Size(63, 15);
+			this.lblCouponCodeScreenResultCouponExpDateResults.TabIndex = 11;
+			this.lblCouponCodeScreenResultCouponExpDateResults.Text = "No Results";
+			// 
+			// lblCouponCodeScreenResultCouponCodeResults
+			// 
+			this.lblCouponCodeScreenResultCouponCodeResults.AutoSize = true;
+			this.lblCouponCodeScreenResultCouponCodeResults.Location = new System.Drawing.Point(268, 100);
+			this.lblCouponCodeScreenResultCouponCodeResults.Name = "lblCouponCodeScreenResultCouponCodeResults";
+			this.lblCouponCodeScreenResultCouponCodeResults.Size = new System.Drawing.Size(63, 15);
+			this.lblCouponCodeScreenResultCouponCodeResults.TabIndex = 10;
+			this.lblCouponCodeScreenResultCouponCodeResults.Text = "No Results";
+			// 
+			// lblCouponCodeScreenResultTitleInstructions
+			// 
+			this.lblCouponCodeScreenResultTitleInstructions.AutoSize = true;
+			this.lblCouponCodeScreenResultTitleInstructions.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultTitleInstructions.Location = new System.Drawing.Point(165, 257);
+			this.lblCouponCodeScreenResultTitleInstructions.Name = "lblCouponCodeScreenResultTitleInstructions";
+			this.lblCouponCodeScreenResultTitleInstructions.Size = new System.Drawing.Size(97, 20);
+			this.lblCouponCodeScreenResultTitleInstructions.TabIndex = 9;
+			this.lblCouponCodeScreenResultTitleInstructions.Text = "Instructions:";
+			// 
+			// lblCouponCodeScreenResultTitleDesc
+			// 
+			this.lblCouponCodeScreenResultTitleDesc.AutoSize = true;
+			this.lblCouponCodeScreenResultTitleDesc.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultTitleDesc.Location = new System.Drawing.Point(169, 204);
+			this.lblCouponCodeScreenResultTitleDesc.Name = "lblCouponCodeScreenResultTitleDesc";
+			this.lblCouponCodeScreenResultTitleDesc.Size = new System.Drawing.Size(93, 20);
+			this.lblCouponCodeScreenResultTitleDesc.TabIndex = 8;
+			this.lblCouponCodeScreenResultTitleDesc.Text = "Description:";
+			// 
+			// lblCouponCodeScreenResultTitleDiscountAmount
+			// 
+			this.lblCouponCodeScreenResultTitleDiscountAmount.AutoSize = true;
+			this.lblCouponCodeScreenResultTitleDiscountAmount.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultTitleDiscountAmount.Location = new System.Drawing.Point(111, 180);
+			this.lblCouponCodeScreenResultTitleDiscountAmount.Name = "lblCouponCodeScreenResultTitleDiscountAmount";
+			this.lblCouponCodeScreenResultTitleDiscountAmount.Size = new System.Drawing.Size(151, 20);
+			this.lblCouponCodeScreenResultTitleDiscountAmount.TabIndex = 7;
+			this.lblCouponCodeScreenResultTitleDiscountAmount.Text = "Discount Ammount:";
+			// 
+			// lblCouponCodeScreenResultTitleDropOffServiceCoupon
+			// 
+			this.lblCouponCodeScreenResultTitleDropOffServiceCoupon.AutoSize = true;
+			this.lblCouponCodeScreenResultTitleDropOffServiceCoupon.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultTitleDropOffServiceCoupon.Location = new System.Drawing.Point(89, 160);
+			this.lblCouponCodeScreenResultTitleDropOffServiceCoupon.Name = "lblCouponCodeScreenResultTitleDropOffServiceCoupon";
+			this.lblCouponCodeScreenResultTitleDropOffServiceCoupon.Size = new System.Drawing.Size(173, 20);
+			this.lblCouponCodeScreenResultTitleDropOffServiceCoupon.TabIndex = 6;
+			this.lblCouponCodeScreenResultTitleDropOffServiceCoupon.Text = "Wash Dry Fold Coupon:";
+			// 
+			// lblCouponCodeScreenResultTitleValid
+			// 
+			this.lblCouponCodeScreenResultTitleValid.AutoSize = true;
+			this.lblCouponCodeScreenResultTitleValid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultTitleValid.Location = new System.Drawing.Point(215, 78);
+			this.lblCouponCodeScreenResultTitleValid.Name = "lblCouponCodeScreenResultTitleValid";
+			this.lblCouponCodeScreenResultTitleValid.Size = new System.Drawing.Size(47, 20);
+			this.lblCouponCodeScreenResultTitleValid.TabIndex = 5;
+			this.lblCouponCodeScreenResultTitleValid.Text = "Valid:";
+			// 
+			// lblCouponCodeScreenResultTitleExpDate
+			// 
+			this.lblCouponCodeScreenResultTitleExpDate.AutoSize = true;
+			this.lblCouponCodeScreenResultTitleExpDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultTitleExpDate.Location = new System.Drawing.Point(187, 140);
+			this.lblCouponCodeScreenResultTitleExpDate.Name = "lblCouponCodeScreenResultTitleExpDate";
+			this.lblCouponCodeScreenResultTitleExpDate.Size = new System.Drawing.Size(75, 20);
+			this.lblCouponCodeScreenResultTitleExpDate.TabIndex = 4;
+			this.lblCouponCodeScreenResultTitleExpDate.Text = "Exp Date:";
+			// 
+			// lblCouponCodeScreenResultTitleCouponCode
+			// 
+			this.lblCouponCodeScreenResultTitleCouponCode.AutoSize = true;
+			this.lblCouponCodeScreenResultTitleCouponCode.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultTitleCouponCode.Location = new System.Drawing.Point(156, 98);
+			this.lblCouponCodeScreenResultTitleCouponCode.Name = "lblCouponCodeScreenResultTitleCouponCode";
+			this.lblCouponCodeScreenResultTitleCouponCode.Size = new System.Drawing.Size(106, 20);
+			this.lblCouponCodeScreenResultTitleCouponCode.TabIndex = 3;
+			this.lblCouponCodeScreenResultTitleCouponCode.Text = "Coupon Code:";
 			// 
 			// btnCouponCodeScreenCheckCode
 			// 
@@ -1355,26 +1507,50 @@
 			this.btnCouponCodeScreenCheckCode.TabIndex = 2;
 			this.btnCouponCodeScreenCheckCode.Text = "Check Code";
 			this.btnCouponCodeScreenCheckCode.UseVisualStyleBackColor = false;
+			this.btnCouponCodeScreenCheckCode.Click += new System.EventHandler(this.btnCouponCodeScreenCheckCode_Click);
 			// 
-			// lblCouponCodeScreenResultTitleCouponCode
+			// lblCouponCodeScreenCodeInput
 			// 
-			this.lblCouponCodeScreenResultTitleCouponCode.AutoSize = true;
-			this.lblCouponCodeScreenResultTitleCouponCode.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.lblCouponCodeScreenResultTitleCouponCode.Location = new System.Drawing.Point(18, 94);
-			this.lblCouponCodeScreenResultTitleCouponCode.Name = "lblCouponCodeScreenResultTitleCouponCode";
-			this.lblCouponCodeScreenResultTitleCouponCode.Size = new System.Drawing.Size(106, 20);
-			this.lblCouponCodeScreenResultTitleCouponCode.TabIndex = 3;
-			this.lblCouponCodeScreenResultTitleCouponCode.Text = "Coupon Code:";
+			this.lblCouponCodeScreenCodeInput.AutoSize = true;
+			this.lblCouponCodeScreenCodeInput.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenCodeInput.Location = new System.Drawing.Point(18, 16);
+			this.lblCouponCodeScreenCodeInput.Name = "lblCouponCodeScreenCodeInput";
+			this.lblCouponCodeScreenCodeInput.Size = new System.Drawing.Size(147, 20);
+			this.lblCouponCodeScreenCodeInput.TabIndex = 1;
+			this.lblCouponCodeScreenCodeInput.Text = "Check Coupon Code";
 			// 
-			// lblCouponCodeScreenResultTitleExpDate
+			// txtCouponCodeScreenCodeInput
 			// 
-			this.lblCouponCodeScreenResultTitleExpDate.AutoSize = true;
-			this.lblCouponCodeScreenResultTitleExpDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.lblCouponCodeScreenResultTitleExpDate.Location = new System.Drawing.Point(49, 125);
-			this.lblCouponCodeScreenResultTitleExpDate.Name = "lblCouponCodeScreenResultTitleExpDate";
-			this.lblCouponCodeScreenResultTitleExpDate.Size = new System.Drawing.Size(75, 20);
-			this.lblCouponCodeScreenResultTitleExpDate.TabIndex = 4;
-			this.lblCouponCodeScreenResultTitleExpDate.Text = "Exp Date:";
+			this.txtCouponCodeScreenCodeInput.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.txtCouponCodeScreenCodeInput.Location = new System.Drawing.Point(18, 39);
+			this.txtCouponCodeScreenCodeInput.Name = "txtCouponCodeScreenCodeInput";
+			this.txtCouponCodeScreenCodeInput.PlaceholderText = "Coupon Code Input";
+			this.txtCouponCodeScreenCodeInput.Size = new System.Drawing.Size(244, 25);
+			this.txtCouponCodeScreenCodeInput.TabIndex = 0;
+			// 
+			// Order_ID
+			// 
+			this.Order_ID.HeaderText = "Column1";
+			this.Order_ID.Name = "Order_ID";
+			// 
+			// lblCouponCodeScreenResultCouponStartDateResults
+			// 
+			this.lblCouponCodeScreenResultCouponStartDateResults.AutoSize = true;
+			this.lblCouponCodeScreenResultCouponStartDateResults.Location = new System.Drawing.Point(268, 124);
+			this.lblCouponCodeScreenResultCouponStartDateResults.Name = "lblCouponCodeScreenResultCouponStartDateResults";
+			this.lblCouponCodeScreenResultCouponStartDateResults.Size = new System.Drawing.Size(63, 15);
+			this.lblCouponCodeScreenResultCouponStartDateResults.TabIndex = 18;
+			this.lblCouponCodeScreenResultCouponStartDateResults.Text = "No Results";
+			// 
+			// lblCouponCodeScreenResultTitleStartDate
+			// 
+			this.lblCouponCodeScreenResultTitleStartDate.AutoSize = true;
+			this.lblCouponCodeScreenResultTitleStartDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultTitleStartDate.Location = new System.Drawing.Point(178, 120);
+			this.lblCouponCodeScreenResultTitleStartDate.Name = "lblCouponCodeScreenResultTitleStartDate";
+			this.lblCouponCodeScreenResultTitleStartDate.Size = new System.Drawing.Size(84, 20);
+			this.lblCouponCodeScreenResultTitleStartDate.TabIndex = 17;
+			this.lblCouponCodeScreenResultTitleStartDate.Text = "Start Date:";
 			// 
 			// Form1
 			// 
@@ -1540,5 +1716,20 @@
 		private Button btnCouponCodeScreenCheckCode;
 		private Label lblCouponCodeScreenCodeInput;
 		private TextBox txtCouponCodeScreenCodeInput;
+		private RichTextBox rtxtCouponScreenInstructionsResults;
+		private RichTextBox rtxtCouponScreenDescResults;
+		private Label lblCouponCodeScreenResultCouponAmountResults;
+		private Label lblCouponCodeScreenResultCouponWDFResults;
+		private Label lblCouponCodeScreenResultCouponValidResults;
+		private Label lblCouponCodeScreenResultCouponExpDateResults;
+		private Label lblCouponCodeScreenResultCouponCodeResults;
+		private Label lblCouponCodeScreenResultTitleInstructions;
+		private Label lblCouponCodeScreenResultTitleDesc;
+		private Label lblCouponCodeScreenResultTitleDiscountAmount;
+		private Label lblCouponCodeScreenResultTitleDropOffServiceCoupon;
+		private Label lblCouponCodeScreenResultTitleValid;
+		private Button btnMenusCoupons;
+		private Label lblCouponCodeScreenResultCouponStartDateResults;
+		private Label lblCouponCodeScreenResultTitleStartDate;
 	}
 }

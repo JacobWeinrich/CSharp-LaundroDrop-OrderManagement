@@ -23,12 +23,12 @@ namespace LaundryOrderAppMain
 			prices = laundryOrderDB.Prices.Select(x => x).ToList();
 			InitializeComponent();
 			UpdateTotal();
-		
-				
-			
+
+
+
 		}
 		//Global Events
-		
+
 
 		//True = Allows a button press to change tab control index / False keeps user from just changing page with tabs
 		bool tabControlChanging = false;
@@ -42,7 +42,7 @@ namespace LaundryOrderAppMain
 		{
 			if (tbcScreens.SelectedIndex == 0)
 			{
-				MessageBox.Show($"Create Order Steps.\n\nStep 1:\n Select Customer by pressing the BLUE 'Select/Add Customer' Button.\n\nStep 2:\n Input amount for what items they have.\n\nStep 3:\n Add Any Notes to Order.\n\nStep 4:\n Press GREEN 'Create Order' Button.\n\nFor More Help Contact Manager/Owner", "Create Order - HELP", MessageBoxButtons.OK ,MessageBoxIcon.Information);
+				MessageBox.Show($"Create Order Steps.\n\nStep 1:\n Select Customer by pressing the BLUE 'Select/Add Customer' Button.\n\nStep 2:\n Input amount for what items they have.\n\nStep 3:\n Add Any Notes to Order.\n\nStep 4:\n Press GREEN 'Create Order' Button.\n\nFor More Help Contact Manager/Owner", "Create Order - HELP", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 			else if (tbcScreens.SelectedIndex == 1)
 			{
@@ -79,6 +79,12 @@ namespace LaundryOrderAppMain
 		{
 			tabControlChanging = true;
 			tbcScreens.SelectedIndex = 2;
+		}
+
+		private void btnMenusCoupons_Click(object sender, EventArgs e)
+		{
+			tabControlChanging = true;
+			tbcScreens.SelectedIndex = 3;
 		}
 
 		//Update on page change
@@ -574,7 +580,7 @@ namespace LaundryOrderAppMain
 						currentOrder.PickUpDate = DateTime.Now;
 						laundryOrderDB.Orders.Where(x => x.OrderID == currentOrder.OrderID).ToList()[0].IsPickedUp = true;
 						laundryOrderDB.Orders.Where(x => x.OrderID == currentOrder.OrderID).ToList()[0].PickUpDate = DateTime.Now;
-						
+
 					}
 				}
 				OrdersList = laundryOrderDB.Orders.Where(x => x.OrderID == currentOrder.OrderID).ToList();
@@ -740,7 +746,7 @@ namespace LaundryOrderAppMain
 		private void btnAdminScreen_Click(object sender, EventArgs e)
 		{
 
-			
+
 
 			if (Interaction.InputBox("To Access Admin Screen.\nEnter Admin Code:", "Admin Login", "", -1, -1) == "0022")
 			{
@@ -750,7 +756,101 @@ namespace LaundryOrderAppMain
 			{
 				MessageBox.Show("Invalid Admin Code.\nPlease Try Again ", "Admin Code Invalid - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
-			
+
 		}
+		//Coupons Screen
+		private void btnCouponCodeScreenCheckCode_Click(object sender, EventArgs e)
+		{
+			int inputedCode;
+			List<Coupon> coupons;
+			if (int.TryParse(txtCouponCodeScreenCodeInput.Text, out inputedCode))
+			{
+				coupons = laundryOrderDB.Coupons.Where(x => x.CouponID == inputedCode).ToList();
+				if (coupons.Count > 0)
+				{
+					Coupon foundCoupon = coupons[0];
+
+					lblCouponCodeScreenResultCouponCodeResults.Text = foundCoupon.CouponID.ToString();
+
+					lblCouponCodeScreenResultCouponExpDateResults.Text = $"{foundCoupon.ExpDate.Month}/{foundCoupon.ExpDate.Day}/{foundCoupon.ExpDate.Year}";
+					lblCouponCodeScreenResultCouponStartDateResults.Text = $"{foundCoupon.StartDate.Month}/{foundCoupon.StartDate.Day}/{foundCoupon.StartDate.Year}";
+
+					//Check if Valid
+					if (foundCoupon.StartDate.Date <= DateTime.Now.Date && foundCoupon.ExpDate.Date > DateTime.Now.Date)
+					{
+						lblCouponCodeScreenResultCouponValidResults.Text = "VALID";
+						lblCouponCodeScreenResultCouponValidResults.ForeColor = Color.Green;
+					}
+					else if (foundCoupon.StartDate.Date > DateTime.Now.Date)
+					{
+						lblCouponCodeScreenResultCouponValidResults.Text = "NOT VALID (Has Not Started Yet)";
+						lblCouponCodeScreenResultCouponValidResults.ForeColor = Color.Orange;
+					}
+					else if (foundCoupon.ExpDate.Date < DateTime.Now.Date)
+					{
+						lblCouponCodeScreenResultCouponValidResults.Text = "NOT VALID (EXPIRED)";
+						lblCouponCodeScreenResultCouponValidResults.ForeColor = Color.Red;
+					}
+
+					if (foundCoupon.ISDropOffServiceCoupon)
+					{
+						lblCouponCodeScreenResultCouponWDFResults.Text = "YES";
+						lblCouponCodeScreenResultCouponWDFResults.ForeColor = Color.Green;
+					}
+					else
+					{
+						lblCouponCodeScreenResultCouponWDFResults.Text = "NO";
+						lblCouponCodeScreenResultCouponWDFResults.ForeColor = Color.Red;
+					}
+
+					if (foundCoupon.DiscountAmount != null)
+					{
+						lblCouponCodeScreenResultCouponAmountResults.Text = ((double)foundCoupon.DiscountAmount).ToString("c2");
+					}
+					else
+					{
+						lblCouponCodeScreenResultCouponAmountResults.Text = "No Amount Specified";
+					}
+					rtxtCouponScreenDescResults.Text = foundCoupon.Description;
+					rtxtCouponScreenInstructionsResults.Text = foundCoupon.Instructions;
+				}
+				else
+				{
+					MessageBox.Show("No Coupon Found with that Code", "Invalid Coupon Code", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					lblCouponCodeScreenResultCouponCodeResults.Text = "No Results";
+
+					lblCouponCodeScreenResultCouponExpDateResults.Text = "No Results";
+					lblCouponCodeScreenResultCouponStartDateResults.Text = "No Results";
+
+					lblCouponCodeScreenResultCouponValidResults.Text = "No Results";
+					lblCouponCodeScreenResultCouponValidResults.ForeColor = Color.Black;
+
+					lblCouponCodeScreenResultCouponWDFResults.Text = "No Results";
+					lblCouponCodeScreenResultCouponWDFResults.ForeColor = Color.Black;
+
+					lblCouponCodeScreenResultCouponAmountResults.Text = "No Results";
+
+					rtxtCouponScreenDescResults.Text = "No Results";
+					rtxtCouponScreenInstructionsResults.Text = "No Results";
+				}
+			}
+			else
+			{
+				MessageBox.Show("Code Must Be Numbers Only", "Invalid Coupon Code INPUT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				lblCouponCodeScreenResultCouponCodeResults.Text = "No Results";
+
+				lblCouponCodeScreenResultCouponExpDateResults.Text = "No Results";
+				lblCouponCodeScreenResultCouponStartDateResults.Text = "No Results";
+
+				lblCouponCodeScreenResultCouponValidResults.Text = "No Results";
+				lblCouponCodeScreenResultCouponValidResults.ForeColor = Color.Black;
+
+				lblCouponCodeScreenResultCouponWDFResults.Text = "No Results";
+				lblCouponCodeScreenResultCouponWDFResults.ForeColor = Color.Black;
+			}
+
+		}
+
+
 	}
 }
