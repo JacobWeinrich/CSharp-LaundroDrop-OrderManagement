@@ -786,6 +786,14 @@
             "fileVersion": "5.0.20.51904"
           }
         }
+      },
+      "TextFlow/1.2.3": {
+        "runtime": {
+          "lib/net6.0/TextFlow.dll": {
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
+          }
+        }
       }
     }
   },
@@ -1265,6 +1273,13 @@
       "sha512": "sha512-c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
+    },
+    "TextFlow/1.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RFZLfOLhEePoYeI1e+QU/sSEDb8oP1w+5iSi+bQu2cnfYp5GqI78yLhakKtY04NJvEVSHwWX/40a3VVqU5AcNw==",
+      "path": "textflow/1.2.3",
+      "hashPath": "textflow.1.2.3.nupkg.sha512"
     }
   }
 }

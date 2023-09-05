@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rGNWSJYhr2ZxXjR9oQwBw8S2bU44E+ZDQo82+k8eg5guqkEAZA8zWM+ppLPyVykTTnnYpyd8PvnW6XpFJSNo/g==",
+  "dgSpecHash": "gsIqt+t0kgRXeCf3YrTZEqlDqayvOcqnWwXvutb0weJyZ/hn8g3hiyv03VK1iMN8IiXgLN6n87vBC3XesFufEg==",
   "success": true,
   "projectFilePath": "C:\\Users\\jacob\\Documents\\GitHub\\LaundroDrop-Orders\\Source Code\\Laundrymat Order System\\LaundryOrderAppMain\\LaundryOrderAppMain.csproj",
   "expectedPackageFiles": [
@@ -71,7 +71,8 @@
     "C:\\Users\\jacob\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
     "C:\\Users\\jacob\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\jacob\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\jacob\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
+    "C:\\Users\\jacob\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
+    "C:\\Users\\jacob\\.nuget\\packages\\textflow\\1.2.3\\textflow.1.2.3.nupkg.sha512"
   ],
   "logs": []
 }

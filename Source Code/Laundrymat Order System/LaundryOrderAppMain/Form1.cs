@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.VisualBasic;
 using System.Security.Cryptography.X509Certificates;
 
+
 namespace LaundryOrderAppMain
 {
 	public partial class Form1 : Form
@@ -850,7 +851,6 @@ namespace LaundryOrderAppMain
 			}
 
 		}
-
 
 	}
 }

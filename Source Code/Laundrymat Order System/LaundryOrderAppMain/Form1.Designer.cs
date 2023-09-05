@@ -130,6 +130,8 @@
 			this.txtOrderNumSearch = new System.Windows.Forms.TextBox();
 			this.lblOrderNumberSearch = new System.Windows.Forms.Label();
 			this.tbpCouponCheckScreen = new System.Windows.Forms.TabPage();
+			this.lblCouponCodeScreenResultCouponStartDateResults = new System.Windows.Forms.Label();
+			this.lblCouponCodeScreenResultTitleStartDate = new System.Windows.Forms.Label();
 			this.rtxtCouponScreenInstructionsResults = new System.Windows.Forms.RichTextBox();
 			this.rtxtCouponScreenDescResults = new System.Windows.Forms.RichTextBox();
 			this.lblCouponCodeScreenResultCouponAmountResults = new System.Windows.Forms.Label();
@@ -148,8 +150,6 @@
 			this.lblCouponCodeScreenCodeInput = new System.Windows.Forms.Label();
 			this.txtCouponCodeScreenCodeInput = new System.Windows.Forms.TextBox();
 			this.Order_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.lblCouponCodeScreenResultCouponStartDateResults = new System.Windows.Forms.Label();
-			this.lblCouponCodeScreenResultTitleStartDate = new System.Windows.Forms.Label();
 			this.panMenusSideBar.SuspendLayout();
 			this.tbcScreens.SuspendLayout();
 			this.tbpOrderCreateScreen.SuspendLayout();
@@ -1361,6 +1361,25 @@
 			this.tbpCouponCheckScreen.Text = "Coupon check";
 			this.tbpCouponCheckScreen.UseVisualStyleBackColor = true;
 			// 
+			// lblCouponCodeScreenResultCouponStartDateResults
+			// 
+			this.lblCouponCodeScreenResultCouponStartDateResults.AutoSize = true;
+			this.lblCouponCodeScreenResultCouponStartDateResults.Location = new System.Drawing.Point(268, 124);
+			this.lblCouponCodeScreenResultCouponStartDateResults.Name = "lblCouponCodeScreenResultCouponStartDateResults";
+			this.lblCouponCodeScreenResultCouponStartDateResults.Size = new System.Drawing.Size(63, 15);
+			this.lblCouponCodeScreenResultCouponStartDateResults.TabIndex = 18;
+			this.lblCouponCodeScreenResultCouponStartDateResults.Text = "No Results";
+			// 
+			// lblCouponCodeScreenResultTitleStartDate
+			// 
+			this.lblCouponCodeScreenResultTitleStartDate.AutoSize = true;
+			this.lblCouponCodeScreenResultTitleStartDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCouponCodeScreenResultTitleStartDate.Location = new System.Drawing.Point(178, 120);
+			this.lblCouponCodeScreenResultTitleStartDate.Name = "lblCouponCodeScreenResultTitleStartDate";
+			this.lblCouponCodeScreenResultTitleStartDate.Size = new System.Drawing.Size(84, 20);
+			this.lblCouponCodeScreenResultTitleStartDate.TabIndex = 17;
+			this.lblCouponCodeScreenResultTitleStartDate.Text = "Start Date:";
+			// 
 			// rtxtCouponScreenInstructionsResults
 			// 
 			this.rtxtCouponScreenInstructionsResults.Location = new System.Drawing.Point(268, 257);
@@ -1532,25 +1551,6 @@
 			// 
 			this.Order_ID.HeaderText = "Column1";
 			this.Order_ID.Name = "Order_ID";
-			// 
-			// lblCouponCodeScreenResultCouponStartDateResults
-			// 
-			this.lblCouponCodeScreenResultCouponStartDateResults.AutoSize = true;
-			this.lblCouponCodeScreenResultCouponStartDateResults.Location = new System.Drawing.Point(268, 124);
-			this.lblCouponCodeScreenResultCouponStartDateResults.Name = "lblCouponCodeScreenResultCouponStartDateResults";
-			this.lblCouponCodeScreenResultCouponStartDateResults.Size = new System.Drawing.Size(63, 15);
-			this.lblCouponCodeScreenResultCouponStartDateResults.TabIndex = 18;
-			this.lblCouponCodeScreenResultCouponStartDateResults.Text = "No Results";
-			// 
-			// lblCouponCodeScreenResultTitleStartDate
-			// 
-			this.lblCouponCodeScreenResultTitleStartDate.AutoSize = true;
-			this.lblCouponCodeScreenResultTitleStartDate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.lblCouponCodeScreenResultTitleStartDate.Location = new System.Drawing.Point(178, 120);
-			this.lblCouponCodeScreenResultTitleStartDate.Name = "lblCouponCodeScreenResultTitleStartDate";
-			this.lblCouponCodeScreenResultTitleStartDate.Size = new System.Drawing.Size(84, 20);
-			this.lblCouponCodeScreenResultTitleStartDate.TabIndex = 17;
-			this.lblCouponCodeScreenResultTitleStartDate.Text = "Start Date:";
 			// 
 			// Form1
 			// 

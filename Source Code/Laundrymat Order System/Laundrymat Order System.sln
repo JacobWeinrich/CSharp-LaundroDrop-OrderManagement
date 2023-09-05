@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaundryOrderSystem", "LaundryOrderSystem\LaundryOrderSystem.csproj", "{87D3B2B1-154A-439E-82B0-29F3DF4588FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaundryOrderAppMain", "LaundryOrderAppMain\LaundryOrderAppMain.csproj", "{35F2B1B7-686B-467E-A727-EB995F156731}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaundryOrderAppMain", "LaundryOrderAppMain\LaundryOrderAppMain.csproj", "{35F2B1B7-686B-467E-A727-EB995F156731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test SMS", "Test SMS\Test SMS.csproj", "{5DBEF5AF-DD0B-4F63-9F72-DD6711533479}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{35F2B1B7-686B-467E-A727-EB995F156731}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35F2B1B7-686B-467E-A727-EB995F156731}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35F2B1B7-686B-467E-A727-EB995F156731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DBEF5AF-DD0B-4F63-9F72-DD6711533479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DBEF5AF-DD0B-4F63-9F72-DD6711533479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DBEF5AF-DD0B-4F63-9F72-DD6711533479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DBEF5AF-DD0B-4F63-9F72-DD6711533479}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

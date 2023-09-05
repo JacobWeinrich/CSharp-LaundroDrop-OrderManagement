@@ -126,3 +126,4 @@ C:\Users\jacob\Documents\GitHub\LaundroDrop-Orders\Source Code\Laundrymat Order 
 C:\Users\jacob\Documents\GitHub\LaundroDrop-Orders\Source Code\Laundrymat Order System\LaundryOrderAppMain\obj\Debug\net6.0-windows\LaundryOrderAppMain.pdb
 C:\Users\jacob\Documents\GitHub\LaundroDrop-Orders\Source Code\Laundrymat Order System\LaundryOrderAppMain\obj\Debug\net6.0-windows\LaundryOrderAppMain.genruntimeconfig.cache
 C:\Users\jacob\Documents\GitHub\LaundroDrop-Orders\Source Code\Laundrymat Order System\LaundryOrderAppMain\obj\Debug\net6.0-windows\ref\LaundryOrderAppMain.dll
+C:\Users\jacob\Documents\GitHub\LaundroDrop-Orders\Source Code\Laundrymat Order System\LaundryOrderAppMain\bin\Debug\net6.0-windows\TextFlow.dll
